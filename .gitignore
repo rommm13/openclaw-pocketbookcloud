@@ -1,5 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local/runtime state
+session.json
+delete-pending.json
+*.lock
+*.part
+*.part.*
+*.tmp
+*.tmp.*
+
+# Credentials and private artifacts
 .env
 .env.*
+*.env
 *.pem
 *.key
 *.p12
@@ -7,10 +23,20 @@
 credentials*
 secrets*
 auth.json
-.DS_Store
-__pycache__/
-*.pyc
-node_modules/
 *.log
+runtime/
+state/
+secrets/
 backups/
 backup/
+media/
+
+# Local development backups
+.dev-backup/
+*.bak
+*.bak-*
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

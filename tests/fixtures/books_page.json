@@ -1,0 +1,25 @@
+{
+  "total": 1,
+  "items": [
+    {
+      "id": "fixture-book-id",
+      "fast_hash": "fixture-fast-hash",
+      "name": "fixture.epub",
+      "format": "epub",
+      "bytes": 12345,
+      "metadata": {
+        "title": "Fixture Book",
+        "authors": "Fixture Author",
+        "isbn": "9780000000000"
+      },
+      "read_status": "reading",
+      "read_percent": 42,
+      "isDrm": false,
+      "isLcp": false,
+      "link": "https://cdn.example.invalid/signed-fixture"
+    }
+  ],
+  "future_field": {
+    "ignored": true
+  }
+}

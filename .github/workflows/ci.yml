@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and contract tests (offline)
+        run: python3 -m unittest discover -s tests -v
+      - name: Public release check
+        run: python3 tools/release_check.py
+      - name: Compile Python
+        run: python3 -m compileall -q scripts tests tools
+      - name: Whitespace check
+        run: git diff --check

@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "alias": "fixture-provider",
+      "name": "Fixture Provider",
+      "shop_id": "1",
+      "logged_by": "password"
+    }
+  ],
+  "future_field": "ignored"
+}
