@@ -1,0 +1,16 @@
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+auth.json
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+*.log
+backups/
+backup/
